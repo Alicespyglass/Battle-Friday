@@ -7,6 +7,8 @@ feature 'attack player' do
 
   scenario 'confirmation of player 2 attack' do
     sign_in_and_play
+    click_button "Cheat emissions test!"
+    click_button "OK"
     click_button "Lick paw"
     expect(page).to have_content "Bear's social media gets attention and VW is fined. Volkswagen -12 HP."
   end
@@ -14,16 +16,16 @@ feature 'attack player' do
   xscenario 'reduce Polar Bear (player2) HP by 12' do
     sign_in_and_play
     click_button "Cheat emissions test!"
-    click_link "OK"
-    expect(page).not_to have_content "Polar Bear: 100HP"
-    expect(page).to have_content "Polar Bear: 88HP"
+    click_button "OK"
+    expect(page).not_to have_content "Polar Bear: 120HP"
+    expect(page).to have_content "Polar Bear: 108HP"
   end
 
   xscenario 'reduce VW (player1) HP by 12' do
     sign_in_and_play
     click_button "Lick paw"
-    click_link "OK"
-    expect(page).not_to have_content "Volkswagen: 100HP"
-    expect(page).to have_content "Volkswagen: 88HP"
+    click_button "OK"
+    expect(page).not_to have_content "Volkswagen: 120HP"
+    expect(page).to have_content "Volkswagen: 108HP"
   end
 end

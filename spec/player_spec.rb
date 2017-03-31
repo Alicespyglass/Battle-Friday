@@ -17,4 +17,12 @@ describe Player do
       expect{ polar_bear.reduce_hp }.to change {polar_bear.hp}.by -Player::DEFAULT_DAMAGE
     end
   end
+
+  describe '#dead?' do
+    it 'returns true if player has 0 hp' do
+      allow(polar_bear).to receive(:hp) { 0 }
+      expect(polar_bear.dead?).to eq true
+    end
+  end
+
 end

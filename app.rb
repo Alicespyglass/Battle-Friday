@@ -21,16 +21,11 @@ class Battle < Sinatra::Base
     erb(:play)
   end
 
-  # post '/switch' do
-  #   $attacker = params.keys.last
-  #   redirect '/attack'
-  # end
-
   get '/attack' do
     @game = $game
-    p @game.opponent
-    p @game.current_turn
-    p @game.attack(@game.opponent)
+    @game.opponent
+    @game.current_turn
+    @game.attack(@game.opponent)
     erb :attack
   end
 

@@ -10,7 +10,7 @@ feature "Enter names" do
 
   scenario "lets Player 1 see Player 2's hit points" do
     sign_in_and_play
-    expect(page).to have_content("Volkswagen: 100HP")
+    expect(page).to have_content("Volkswagen: 120HP")
   end
 
   scenario "lets Player 1 see Player 2's health bar" do
