@@ -25,19 +25,19 @@ let(:polar_bear) { double(:polar_bear) }
     end
   end
 
-  # describe '#switch' do
-  #   it 'switches the players' do
-  #     expect(game.switch).to eq [polar_bear, volkswagen]
-  #   end
-  # end
-
   describe '#current_turn' do
     it 'player 1 goes first' do
       expect(game.current_turn).to eq volkswagen
     end
   end
 
-  describe "#siwtch turns" do
+  describe '#opponent' do
+    it 'returns current opponent' do
+      expect(game.opponent).to eq polar_bear
+    end
+  end
+
+  describe "#switch turns" do
     it 'switches the turn' do
       game.switch_turns
       expect(game.current_turn).to eq polar_bear

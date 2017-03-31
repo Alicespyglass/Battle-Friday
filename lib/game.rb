@@ -25,6 +25,13 @@ attr_reader :players, :current_turn
     @current_turn = opponent_of(current_turn)
   end
 
+  def opponent
+    opponent_of(@current_turn)
+  end
+
+private
+
+
   def opponent_of(the_player)
     players.select { |player| player != the_player }.first
   end

@@ -11,7 +11,7 @@ feature 'attack player' do
     expect(page).to have_content "Bear's social media gets attention and VW is fined. Volkswagen -12 HP."
   end
 
-  scenario 'reduce HP by 12' do
+  xscenario 'reduce Polar Bear (player2) HP by 12' do
     sign_in_and_play
     click_button "Cheat emissions test!"
     click_link "OK"
@@ -19,7 +19,7 @@ feature 'attack player' do
     expect(page).to have_content "Polar Bear: 88HP"
   end
 
-  scenario 'reduce HP by 12' do
+  xscenario 'reduce VW (player1) HP by 12' do
     sign_in_and_play
     click_button "Lick paw"
     click_link "OK"

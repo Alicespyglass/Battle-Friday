@@ -1,4 +1,6 @@
-feature 'tracks turns' do
+
+
+feature 'tracks turns - change_turns_spec' do
   scenario 'player 1 goes first' do
     sign_in_and_play
     expect(page).to have_content "Volkswagen's turn"

@@ -5,7 +5,7 @@
   <%= @game.player2.name %>'s social media gets attention and VW is fined. <%= @game.player1.name %> -12 HP.
   </p>
 <% end %>
-<%= @game.oponent_of(@game.current_turn).name %> HP: <%= @game.@game.oponent_of(@game.current_turn).hp %>
+<%= @game.opponent.name %> HP: <%= @game.opponent.hp %>
 <form action="/switch_turns" method="post">
   <input type="submit" value="OK">
 </form>
